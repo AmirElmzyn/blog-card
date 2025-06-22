@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --gray-950: hsl(0, 0%, 7%);
+    --gray-500: hsl(0, 0%, 42%);
+    --my-white: hsl(0, 0%, 100%);
+    --my-yellow: hsl(47, 88%, 63%);
+    /*
+    - Font size (paragraph): 16px
+    - Weights: 500, 800
+    */
+}
+::selection {
+    color: var(--my-yellow);
+    background-color: var(--gray-500);
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Figtree", sans-serif;
+    background-color: var(--my-yellow);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+    max-width: 370px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid var(--gray-950);
+    background-color: var(--my-white);
+    box-shadow: var(--gray-950) 10px 10px;
+}
+.img{
+    width: 100%;
+}
+.img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    padding: 5px 13px;
+    border-radius: 3px;
+    width: fit-content;
+    color: var(--gray-950);
+    background-color: var(--my-yellow);
+}
+h4{
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 15px;
+    color: var(--gray-950);
+}
+h2{
+    font-weight: 800;
+    padding-top: 15px;
+    color: var(--gray-950);
+}
+h2:hover{
+    cursor: pointer;
+    color: var(--my-yellow);
+}
+.info p{
+    font-size: 16px;
+    padding-top: 15px;
+    color: var(--gray-500);
+}
+
+.person{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.person p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+}
+.person img{
+    width: 30px;
+}
+
+footer {
+    padding: 30px;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+    color: var(--gray-500);
+    background-color: transparent;
+}
+footer span {
+    font-weight: 700;
+    color: var(--gray-950);
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 300px;
+    }
+    h5{
+        font-size: 12px;
+    }
+    h4{
+        font-size: 12px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .info p{
+        font-size: 14px;
+    }
+}
